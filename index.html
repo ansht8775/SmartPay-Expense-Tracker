@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SmartPay Tracker</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+<div class="header">
+  <h3>Welcome, Ansh Tripathi</h3>
+  <p>Personal Finance Manager</p>
+  
+</div>
+
+<div class="container">
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">
+                    <h2>SmartPay</h2>
+                  > Expense Tracking Made Easy
+    </div>
+
+    <div class="tagline">
+      
+    </div>
+  </nav>
+
+</div>
+
+    <!-- TOTAL EXPENSE -->
+
+    <div class="total-card">
+
+        <p>Total Expense</p>
+
+        <h1 id="totalAmount">₹0.00</h1>
+
+    </div>
+
+    <!-- CARDS -->
+
+    <div class="cards">
+
+        <div class="card">
+
+            <p>Wallet Balance</p>
+
+            <h2>₹6000</h2>
+
+        </div>
+
+        <div class="card">
+
+            <p>Total Transactions</p>
+
+            <h2 id="transactionCount">0</h2>
+
+        </div>
+
+        <div class="card">
+
+            <p>Monthly Budget</p>
+
+            <h2>₹10000</h2>
+
+        </div>
+<!-- QR PAYMENT -->
+
+<div class="qr-card">
+
+    <h3>Quick UPI Payment</h3>
+
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=ansh@paytm&pn=Ansh&cu=INR">
+
+    <p>
+        Scan & Pay using Paytm, PhonePe or Google Pay
+    </p>
+
+</div>
+
+</div>
+    </div>
+
+    <!-- CHART -->
+
+    <div class="chart-box">
+
+        <h3>Expense Analytics</h3>
+
+        <canvas id="expenseChart"></canvas>
+
+    </div>
+
+    <!-- FORM -->
+
+    <form id="paymentForm">
+
+        <input
+            type="text"
+            id="title"
+            placeholder="Payment Name"
+            required
+        >
+
+        <input
+            type="number"
+            id="amount"
+            placeholder="Amount"
+            required
+        >
+
+        <select id="category">
+
+            <option>Food</option>
+            <option>Shopping</option>
+            <option>Recharge</option>
+            <option>Travel</option>
+            <option>Electricity</option>
+            <option>Entertainment</option>
+            <option>Medical &  Health</option>
+            <option>Rent & EMI</option>
+
+        </select>
+
+        <form id="txnForm">
+
+  <input id="category" placeholder="Category">
+  <input id="date" type="date">
+
+  <button type="submit">Add Transaction</button>
+
+</form>
+
+<div id="paymentList"></div>
+
+<h3 id="empty">No transactions found yet</h3>
+    
+
+
+    <!-- TRANSACTION LIST -->
+
+    <div class="transactions">
+  <h3>Recent Transactions</h3>
+
+  <div class="empty-state">
+    <p>No transactions found yet</p>
+    <small>Start adding your first expense</small>
+  </div>
+</div>
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+<footer>
+
+    <p>
+        SmartPay © 2026 | Developed by Ansh Tripathi
+    </p>
+
+</footer>
+</body>
+</html>
